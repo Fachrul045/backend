@@ -14,7 +14,10 @@ try {
     console.error(error);
 }
 
-app.use(cors({ credentials:true, origin:'http://localhost:3000' }));
+// app.use(cors({ credentials:true, origin:(origin, callback) => {
+//     callback(null, true); // Allow all origins
+// } }));
+app.use(cors({ credentials:true, origin:"http://localhost:3000" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);

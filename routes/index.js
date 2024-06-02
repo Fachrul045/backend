@@ -11,4 +11,9 @@ router.post('/login', Login);
 router.get('/token', refreshToken);
 router.delete('/logout', Logout);
 
+// hello world
+router.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
 export default router;
